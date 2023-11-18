@@ -20,7 +20,10 @@ const createCardEl = () => {
 
 	const cardImageInnerEl = createElement('div', 'card__image-inner');
 
-	const cardImageEl = createImageElement('./images/drawers.jpg');
+	const cardImageEl = createElement('img', null, null, [
+		createElementAttribute('src', './images/drawers.jpg'),
+		createElementAttribute('alt', ''),
+	]);
 
 	cardImageInnerEl.appendChild(cardImageEl);
 
@@ -51,13 +54,12 @@ const createCardEl = () => {
 		'card__author-img-box'
 	);
 
-	const cardAuthorImageEl = createImageElement(
-		'./images/avatar.jpg',
-		'card__author-img',
-		'Michelle Appleton',
-		40,
-		40
-	);
+	const cardAuthorImageEl = createElement('img', 'card__author-img', null, [
+		createElementAttribute('src', './images/avatar.jpg'),
+		createElementAttribute('alt', 'Michelle Appleton'),
+		createElementAttribute('width', 40),
+		createElementAttribute('height', 40),
+	]);
 
 	cardAuthorImageWrapperEl.appendChild(cardAuthorImageEl);
 
@@ -109,8 +111,10 @@ const createCardEl = () => {
 	for (const shareActionButton of shareActionButtons) {
 		const cardShareActionButtonItemEl = createElement('li');
 
-		const cardShareActionButtonItemLinkEl = createLinkElement('#');
-		cardShareActionButtonItemLinkEl.title = `Share on ${shareActionButton}`;
+		const cardShareActionButtonItemLinkEl = createElement('a', null, null, [
+			createElementAttribute('href', '#'),
+			createElementAttribute('title', `Share on ${shareActionButton}`),
+		]);
 
 		const cardShareActionButtonItemLinkIconEl = createElement(
 			'i',
@@ -192,20 +196,29 @@ const createFooterEl = () => {
 
 	const footerTextEl = createElement('p', null, 'Challenge by ');
 
-	const footerTextLinkCreatorEl = createLinkElement(
-		'https://www.frontendmentor.io?ref=challenge',
+	const footerTextLinkCreatorEl = createElement(
+		'a',
 		'btn btn--link',
 		'Frontend Mentor',
-		'noopener',
-		'_blank'
+		[
+			createElementAttribute(
+				'href',
+				'https://www.frontendmentor.io?ref=challenge'
+			),
+			createElementAttribute('rel', 'noopener'),
+			createElementAttribute('target', '_blank'),
+		]
 	);
 
-	const footerTextLinkCoderEl = createLinkElement(
-		'https://github.com/al3xback',
+	const footerTextLinkCoderEl = createElement(
+		'a',
 		'btn btn--link',
 		'al3xback',
-		'noopener',
-		'_blank'
+		[
+			createElementAttribute('href', 'https://github.com/al3xback'),
+			createElementAttribute('rel', 'noopener'),
+			createElementAttribute('target', '_blank'),
+		]
 	);
 
 	footerTextEl.appendChild(footerTextLinkCreatorEl);
