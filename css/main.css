@@ -253,8 +253,8 @@ ol {
   flex-direction: column;
   width: 100%;
   max-width: 24.6153846154em;
-  margin: 3.0769230769em 0 4.6153846154em;
   background-color: hsl(0, 0%, 100%);
+  margin: 3.0769230769em 0 4.6153846154em;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
@@ -362,8 +362,8 @@ ol {
 
 .card__share {
   position: absolute;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -423,8 +423,8 @@ ol {
 .card__share-action {
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   right: 0;
   gap: 1.5384615385em;
   padding: inherit;
@@ -502,8 +502,8 @@ ol {
   }
   .card__share-action {
     top: auto;
-    bottom: 6.1538461538em;
     left: auto;
+    bottom: 6.1538461538em;
     right: -5.2307692308em;
     padding: 1.2307692308em 2.4615384615em;
     background-color: hsl(217, 19%, 35%);
@@ -517,8 +517,8 @@ ol {
   .card__share-action::before {
     content: "";
     position: absolute;
-    bottom: -0.5769230769em;
     left: 50%;
+    bottom: -0.5769230769em;
     width: 1.1538461538em;
     height: 1.1538461538em;
     background-color: inherit;
