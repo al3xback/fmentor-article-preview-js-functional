@@ -23,6 +23,8 @@ const createCardEl = () => {
 	const cardImageEl = createElement('img', null, null, [
 		createElementAttribute('src', './images/drawers.jpg'),
 		createElementAttribute('alt', ''),
+		createElementAttribute('width', 280),
+		createElementAttribute('height', 278),
 	]);
 
 	cardImageInnerEl.appendChild(cardImageEl);
